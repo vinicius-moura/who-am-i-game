@@ -17,7 +17,7 @@ export const Home: React.FC<HomeProps> = ({ onJoin }) => {
     try {
       const result = await createNewRoom(username);
       onJoin(result.player, result.room);
-    } catch { // Removido o (e)
+    } catch {
       alert('Error creating room');
     }
   };
