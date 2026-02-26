@@ -34,7 +34,7 @@ export interface RealtimePayload<T> {
 export interface Message {
   id: string;
   room_id: string;
-  player_id: string | null;
+  player_id: string;
   content: string;
   type: 'CHAT' | 'SYSTEM';
   created_at: string;

@@ -1,0 +1,47 @@
+@use '../../styles/variables' as *;
+
+.card {
+  position: absolute;
+  width: 140px;
+  background: $surface;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+
+  &.active {
+    border-color: $primary;
+    box-shadow: 0 0 15px rgba($primary, 0.4);
+    transform: scale(1.05);
+  }
+
+  // Positioning logic for the 4-player table
+  &.slot-0 { top: 0; left: 50%; transform: translateX(-50%); }
+  &.slot-1 { right: 0; top: 50%; transform: translateY(-50%); }
+  &.slot-2 { bottom: 0; left: 50%; transform: translateX(-50%); }
+  &.slot-3 { left: 0; top: 50%; transform: translateY(-50%); }
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: lighten($surface, 10%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: $primary;
+}
+
+.roleBadge {
+  background: rgba($primary, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: $text;
+}

@@ -1,0 +1,46 @@
+@use '../../styles/variables' as *;
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  background: darken($background, 2%);
+  height: 100%;
+  border-left: 1px solid rgba($text, 0.1);
+}
+
+.messageList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.myMsg { align-self: flex-end; text-align: right; }
+.otherMsg { align-self: flex-start; }
+
+.text {
+  background: $surface;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 4px 0;
+  max-width: 240px;
+  word-wrap: break-word;
+}
+
+.form {
+  padding: 1rem;
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid rgba($text, 0.1);
+
+  input {
+    flex: 1;
+    background: $surface;
+    border: 1px solid rgba($text, 0.2);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+  }
+}
